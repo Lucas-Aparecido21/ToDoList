@@ -2,37 +2,33 @@
   width: 100%;
   padding: 2.5rem;
   left: 5rem;
-  display:flex;
+  display: flex;
   justify-content: center;
   text-align: center;
 }
 
-
-.taskClip{
-align-items: center;
-text-align: center;
-margin-bottom: 5rem;
-}
-
-.taskCenter{
-text-align: center;
-align-items: center;
-
-}
-
-.taskCenter b{
-  font-size: 1rem;
-  color:var(--gray-300);
-  font-family: "Inter", sans-serif;;
+.taskClip {
+  align-items: center;
   text-align: center;
-align-items: center;
-
+  margin-bottom: 5rem;
 }
 
-.taskCenter p{
-  font-size: 1rem;
-  color:var(--gray-300);
+.taskCenter {
   text-align: center;
-align-items: center;
+  align-items: center;
+}
 
+.taskCenter b {
+  font-size: 1rem;
+  color: var(--gray-300);
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  align-items: center;
+}
+
+.taskCenter p {
+  font-size: 1rem;
+  color: var(--gray-300);
+  text-align: center;
+  align-items: center;
 }
