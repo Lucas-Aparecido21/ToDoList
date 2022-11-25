@@ -25,4 +25,5 @@
 body {
   background-color: var(--gray-600);
   min-height: 100vh;
+  font-family: "Inter", sans-serif;
 }
