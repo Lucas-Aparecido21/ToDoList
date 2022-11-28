@@ -7,7 +7,7 @@ interface Props{
   task: ITask[];
 }
 
-export function Task({task}: P rops) {
+export function Task({task}: Props) {
   return (
     
 
@@ -25,13 +25,12 @@ export function Task({task}: P rops) {
 
       </header>
     
-  <div className="list"> 
-{task.map(  (task) ( =>
- <TaskList/>
- <TaskList/>
-))}
-  </div>
+<div className="tasks">
+{task.map(      (task) => (
+<TaskList key={task.id} task={task}/>
 
+))}
+</div>
     </section>  
  
     /* <article className="taskMenu">

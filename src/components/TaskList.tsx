@@ -1,7 +1,13 @@
 import React from 'react';
 import './TaskList.modules.css'
 import {Trash} from 'phosphor-react';
-export function TaskList(){
+import { ITask } from '../App';
+
+interface Props{
+   task: ITask
+}
+
+export function TaskList({task}: Props){
 return(   
 <div className='task'>
 <button className='check'> 
@@ -9,7 +15,7 @@ return(
 </button>
 
 <p>
-Teste
+{task.title}
 </p>
 
 <button className='deleteButton'>

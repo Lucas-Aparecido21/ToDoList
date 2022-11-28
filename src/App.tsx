@@ -11,10 +11,18 @@ export interface ITask{
   complete: boolean;
 }
 
-const [task, setTask] = useState<ITask[]> ([]);
+
 
 
 export function App() {
+
+  const [task, setTask] = useState<ITask[]>([
+    {
+      id: "teste",
+      title: "Teste 1",
+      complete: true,
+    }
+  ])
   return (
     <div>
       <Header />
