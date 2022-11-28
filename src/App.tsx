@@ -3,33 +3,22 @@ import "./global.css";
 import { Header } from "./components/Header";
 import { Newtask } from "./components/Newtask";
 import { Task } from "./components/Task";
-import {useState} from 'react';
+import { useState } from "react";
 
-export interface ITask{
-  id: string;
+export interface ITask {
+  id: number;
   title: string;
   complete: boolean;
 }
 
-
-
-
 export function App() {
-
-  const [task, setTask] = useState<ITask[]>([
-    {
-      id: "teste",
-      title: "Teste 1",
-      complete: true,
-    }
-  ])
+  const [task, setTask] = useState<ITask[]>([]);
   return (
     <div>
       <Header />
 
       <div>
-        <Newtask />
-
+        <Newtask setTask={setTask} />
 
         <Task task={task} />
       </div>
