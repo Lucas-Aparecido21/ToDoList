@@ -2,6 +2,7 @@ import { FormEvent, ChangeEvent, InvalidEvent, useState } from "react";
 import "./Newtask.modules.css";
 import { PlusCircle } from "phosphor-react";
 import { ITask } from "../App";
+import { Task } from "./Task";
 
 interface Props {
   setTask: React.Dispatch<React.SetStateAction<ITask[]>>;
@@ -35,7 +36,7 @@ export function Newtask({ setTask }: Props) {
     <div>
       <form onSubmit={handleCreateNewTask} className="taskForm">
         <textarea
-          name="createTask"
+          name="task"
           onInvalid={handleNewTaskInvalid}
           value={newTask}
           placeholder="Adicione uma nova tarefa"

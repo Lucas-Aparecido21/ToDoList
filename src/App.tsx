@@ -6,9 +6,9 @@ import { Task } from "./components/Task";
 import { useState } from "react";
 
 export interface ITask {
-  id: number;
-  title: string;
-  complete: boolean;
+     id: number;
+    title: string;
+    complete: boolean;
 }
 
 export function App() {

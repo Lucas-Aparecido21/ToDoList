@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { ITask } from "../App";
 import ClipBoard from "../assets/Clipboard.svg";
 
@@ -9,6 +9,10 @@ interface Props {
 }
 
 export function Task({ task }: Props) {
+
+
+
+
   return (
     <>
       {task.length > 0 ? (

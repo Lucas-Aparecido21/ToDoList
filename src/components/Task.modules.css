@@ -23,10 +23,13 @@
   color: var(--blue);
   font-weight: 700;
   font-size: 0.875;
+  font-weight: normal;
+
 }
 
 .complete p {
   color: var(--purple);
+  font-weight: normal;
 }
 
 .list {
@@ -41,15 +44,38 @@
   margin: 0 auto;
   margin-top: 5.625rem;
   padding: 0 1rem;
+  gap:4rem;
 }
 
+
 .taskCenter {
-  width: 100%;
+  width: 95%;
   display: grid;
   justify-content: center;
   align-items: center;
   align-content: center;
+
 }
 
+.taskCenter b{
+  color: var(--gray-300);
+
+}
+
+.taskCenter p{
+  color: var(--gray-300);
+    font-weight: normal;
+
+}
 .taskClip {
+    margin-bottom: 5rem;
+    position: relative;
+    top: 2.9rem;
+    left: 8rem;
+    width: 65px;
+}
+
+.tasks{
+  gap:10px;
+  display: grid;
 }
