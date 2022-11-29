@@ -1,16 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import "./TaskList.modules.css";
 import { Trash } from "phosphor-react";
 import { ITask } from "../App";
 
 interface Props {
   task: ITask;
- 
 }
 
 export function TaskList({ task }: Props) {
-
-
+  function handleDeleteTask() {
+    console.log("delete task");
+  }
 
   return (
     <div className="task">
@@ -18,13 +18,9 @@ export function TaskList({ task }: Props) {
         <div />
       </button>
       <p>{task.title}</p>
-      <button className="deleteButton">
+      <button className="deleteButton" onClick={handleDeleteTask}>
         <Trash size={20} />
       </button>
     </div>
   );
 }
-function onDeteleTask(task: ITask) {
-  throw new Error("Function not implemented.");
-}
-

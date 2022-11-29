@@ -6,7 +6,6 @@
   justify-content: center;
   border: none;
   margin-top: -2rem;
-
 }
 
 .taskForm textarea {
@@ -14,9 +13,9 @@
   border: 0;
   border-radius: 8px;
   color: var(--gray-100);
-resize: none;
+  resize: none;
   padding: 1rem;
-  width: 46rem;
+  width: 47rem;
   font-size: 1rem;
   align-items: center;
   height: 3.375rem;

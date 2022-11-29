@@ -3,6 +3,8 @@
   align-items: center;
   justify-content: space-between;
   margin-bottom: 1.5rem;
+  margin-left: -2.2rem;
+  width: 110%;
 }
 .menu div {
   display: flex;
@@ -24,7 +26,6 @@
   font-weight: 700;
   font-size: 0.875;
   font-weight: normal;
-
 }
 
 .complete p {
@@ -44,9 +45,8 @@
   margin: 0 auto;
   margin-top: 5.625rem;
   padding: 0 1rem;
-  gap:4rem;
+  gap: 4rem;
 }
-
 
 .taskCenter {
   width: 95%;
@@ -54,28 +54,25 @@
   justify-content: center;
   align-items: center;
   align-content: center;
-
 }
 
-.taskCenter b{
+.taskCenter b {
   color: var(--gray-300);
-
 }
 
-.taskCenter p{
+.taskCenter p {
   color: var(--gray-300);
-    font-weight: normal;
-
+  font-weight: normal;
 }
 .taskClip {
-    margin-bottom: 5rem;
-    position: relative;
-    top: 2.9rem;
-    left: 8rem;
-    width: 65px;
+  margin-bottom: 5rem;
+  position: relative;
+  top: 2.9rem;
+  left: 8rem;
+  width: 65px;
 }
 
-.tasks{
-  gap:10px;
+.tasks {
+  gap: 10px;
   display: grid;
 }

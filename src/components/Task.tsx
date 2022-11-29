@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import { ITask } from "../App";
 import ClipBoard from "../assets/Clipboard.svg";
 
@@ -9,10 +8,6 @@ interface Props {
 }
 
 export function Task({ task }: Props) {
-
-
-
-
   return (
     <>
       {task.length > 0 ? (
@@ -20,12 +15,12 @@ export function Task({ task }: Props) {
           <header className="menu">
             <div>
               <p>Tarefas criadas</p>
-              <span>1</span>
+              <span>{task.length}</span>
             </div>
 
             <div className="complete">
               <p>Concluidas</p>
-              <span>1 de 10</span>
+              <span>1 de {task.length}</span>
             </div>
           </header>
 
