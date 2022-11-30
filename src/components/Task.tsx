@@ -5,9 +5,14 @@ import "./Task.modules.css";
 import { TaskList } from "./TaskList";
 interface Props {
   task: ITask[];
+ onDelete: (taskID: number) =>void;
+ onComplete: (taskID: number) => void;
 }
 
-export function Task({ task }: Props) {
+export function Task({ task, onDelete, onComplete }: Props) {
+const taskQuant = task.length;
+const completeTask = task.filter ( (task) => task.complete).length;
+  
   return (
     <>
       {task.length > 0 ? (
@@ -15,18 +20,18 @@ export function Task({ task }: Props) {
           <header className="menu">
             <div>
               <p>Tarefas criadas</p>
-              <span>{task.length}</span>
+              <span>{taskQuant}</span>
             </div>
 
             <div className="complete">
               <p>Concluidas</p>
-              <span>1 de {task.length}</span>
+              <span>{completeTask} de {taskQuant}</span>
             </div>
           </header>
 
           <div className="tasks">
             {task.map((task) => (
-              <TaskList key={task.id} task={task} />
+              <TaskList key={task.id} task={task} onDelete={onDelete} onComplete={onComplete}/>
             ))}
           </div>
         </section>
