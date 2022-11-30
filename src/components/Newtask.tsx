@@ -2,12 +2,14 @@ import { FormEvent, ChangeEvent, InvalidEvent, useState } from "react";
 import "./Newtask.modules.css";
 import { PlusCircle } from "phosphor-react";
 import { ITask } from "../App";
+import { createUniqueId } from "../utils/createUniqueId";
 
 interface Props {
   setTask: React.Dispatch<React.SetStateAction<ITask[]>>;
+  tasks: ITask[];
 }
 
-export function Newtask({ setTask }: Props) {
+export function Newtask({ setTask, tasks }: Props) {
   const [newTask, setNewTask] = useState("");
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
@@ -25,7 +27,7 @@ export function Newtask({ setTask }: Props) {
     setTask((task) => [
       ...task,
       {
-        id: task.length + 1,
+        id: createUniqueId(tasks),
         title: newTask,
         complete: false,
       },
