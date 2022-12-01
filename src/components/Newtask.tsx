@@ -13,7 +13,7 @@ export function Newtask({ setTask, tasks }: Props) {
   const [newTask, setNewTask] = useState("");
 
   function handleNewTaskInvalid(event: InvalidEvent<HTMLTextAreaElement>) {
-    event.target.setCustomValidity("Esse campo é obrigatório");
+    event.target.setCustomValidity("Este campo é obrigatório");
   }
 
   function handleChangeNewTask(event: ChangeEvent<HTMLTextAreaElement>) {
@@ -44,7 +44,7 @@ export function Newtask({ setTask, tasks }: Props) {
           onChange={handleChangeNewTask}
           required={true}
         />
-        <button type="submit" disabled={newTask.length === 0}>
+        <button type="submit">
           Criar
           <PlusCircle size={16} />
         </button>
